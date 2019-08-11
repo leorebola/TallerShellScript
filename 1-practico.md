@@ -82,25 +82,31 @@ echo "Hola, $NOMBRE!"
 
 ### Ejercicio 1
 
-Realizar un script que le consulte su edad y le sume 10 años.
+Escriba los dos scripts de ejemplo que se encuentran acá arriba y ejecutelos para comprobar su funcionamiento.
+
+### Ejercicio 2
+
+Realizar un script que le solicite ingresar su edad y le sume 10 años.
+
+```console
+Por favor ingrese su edad:
+```
 
 El resultado de la operación debe ser impresa por pantalla con el siguiente texto de ejemplo:
 
 ```console
-"Mi edad en diez años será: RESULTADO"
+"Tu edad en diez años será: RESULTADO"
 ```
 
 _Ayuda: Para realizar operaciones aritmeticas debe usar esta notación: $(( a + b ))_
 
-### Ejercicio 2
-
 ### Ejercicio 3
 
-### Ejercicio 4
+Un script que sume dos números enteros pasados como parámetros al momento de la ejecución. No deberá solicitar ninguna acción al usuario.
 
 ## Condicionales y Bucles
 
-#### if
+### if
 
 ```console
 if [[ $num = 1 ]]
@@ -112,17 +118,50 @@ else
     echo "El número no es UNO ni DOS." 
 fi
 ```
-**Nota:** _Si lo necesita consulte en [4-ayuda.md](4-ayuda.md) las formas de comparación con valores numéricos y cadenas alfanuméricas._
+**Nota:** _Si necesita consulte en [4-ayuda.md](4-ayuda.md) las formas de comparación con valores numéricos y cadenas alfanuméricas._
 
-### Ejercicio 1
+#### Ejercicio 1
 
-### Ejercicio 2
+Implemente un script que valide la cantidad de parametros ingresados sea la correcta. Ni menos, ni más.
 
-### Ejercicio 3
+Deberá validar para su script que el usuario le pasó dos parametros al ejecutarlo.
 
-### Ejercicio 4
+```console
+./check-parametros.sh uno dos
+OK
 
-#### for
+./check-parametros.sh uno dos tres
+ERROR: La cantidad de parametros requeridos son dos y usted ingreso X_VALOR.
+```
+Donde X_VALOR es la cantidad de parametros que ingreso el usuario.
+
+_Ayuda: Para conocer la cantidad de parametros con la cual fue ejecutado el script, debe usar la variable especial: $#_
+
+#### Ejercicio 2
+
+Un script que ingresando la edad, diga si es mayor o menor de edad (18 años).
+
+### for
+
+```console
+for (( counter=0; counter<10; counter++ ))
+do
+    echo "$counter"
+done
+```
+
+#### Ejercicio 1
 
 
-#### case
+#### Ejercicio 2
+
+
+### case
+
+
+#### Ejercicio 1
+
+
+#### Ejercicio 2
+
+
