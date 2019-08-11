@@ -14,9 +14,9 @@ Nombrado de variables:
 - MY_CONSTANT: Constantes y nombres de variables de entorno.
 
 
-### Ejercicio 1
+#### Ejercicio 1
 
-Realice un script que defina e inicialice las siguientes variables como si fueran constantes de configuración:
+Realice un script (p1e1-constantes.sh) que defina e inicialice las siguientes variables como si fueran constantes de configuración:
 
 - BASE_PATH
 - EMAIL_TEAM
@@ -33,21 +33,21 @@ UMBRAL_ERROR: valor
 --------------------------------------------
 ```
 
-### Ejercicio 2
+#### Ejercicio 2
 
-Hacer un script con las siguientes variables inicializadas con el valor de texto NONE:
+Hacer un script (p1e2-variables.sh) con las siguientes variables inicializadas con el valor de texto NONE:
 - nombre
 - edad
 - ciudad
 
-A continuación, deberá imprimir el mensaje (note el salto de linea vacio):
+A continuación, deberá imprimir el mensaje (note el salto de línea vacío):
 
 ```console
 Inicializando variables...
 
 ```
 
-Para luego de ese mensaje modificar el valor de las tres variables con su correspondientes datos (nombre, edad y ciudad). El resultado del script en pantalla deberá ser el siguiente:
+Para luego de ese mensaje modificar el valor de las tres variables con sus correspondientes datos (nombre, edad y ciudad). El resultado del script en pantalla deberá ser el siguiente:
 
 ```console
 Inicializando variables...
@@ -55,7 +55,7 @@ Inicializando variables...
 Mi nombre es VALOR_NOMBRE, tengo VALOR_EDAD años y vivo en a ciudad de VALOR_CIUDAD.
 ```
 
-_Ayuda: Para realizar un salto de linea puede utilizar \n en el comando echo_
+_Ayuda: Para realizar un salto de línea puede utilizar \n en el comando echo_
 
 ## Parámetros
 
@@ -67,26 +67,26 @@ APELLIDO=$2
 
 echo "Hola, $NOMBRE $APELLIDO!"
 
-# Ejecución: ./saludar.sh Chuck Norris
+# Ejecución: ./p1e3-param-saludar.sh Chuck Norris
 ```
 
 ```console
 #!/bin/sh
 
-# Modo interactivo de solicitar un parametro
+# Modo interactivo de solicitar un parámetro
 
 echo "¿Cual es tu nombre?"
 read NOMBRE
 echo "Hola, $NOMBRE!"
 ```
 
-### Ejercicio 1
+#### Ejercicio 3 y 4
 
-Escriba los dos scripts de ejemplo que se encuentran acá arriba y ejecutelos para comprobar su funcionamiento.
+Escriba los dos scripts (p1e3-param-saludar.sh y p1e4-param-saludar-interactivo.sh) de ejemplo que se encuentran acá arriba y ejecútelos para comprobar su funcionamiento.
 
-### Ejercicio 2
+#### Ejercicio 5
 
-Realizar un script que le solicite ingresar su edad y le sume 10 años.
+Realizar un script (p1e5-param-edad.sh) que le solicite ingresar su edad y le sume 10 años.
 
 ```console
 Por favor ingrese su edad:
@@ -98,11 +98,11 @@ El resultado de la operación debe ser impresa por pantalla con el siguiente tex
 "Tu edad en diez años será: RESULTADO"
 ```
 
-_Ayuda: Para realizar operaciones aritmeticas debe usar esta notación: $(( a + b ))_
+_Ayuda: Para realizar operaciones aritméticas debe usar esta notación: $(( a + b ))_
 
-### Ejercicio 3
+#### Ejercicio 6
 
-Un script que sume dos números enteros pasados como parámetros al momento de la ejecución. No deberá solicitar ninguna acción al usuario.
+Un script (p1e6-param-sumar.sh) que sume dos números enteros pasados como parámetros al momento de la ejecución. No deberá solicitar ninguna acción al usuario.
 
 ## Condicionales y Bucles
 
@@ -120,11 +120,11 @@ fi
 ```
 **Nota:** _Si necesita consulte en [4-ayuda.md](4-ayuda.md) las formas de comparación con valores numéricos y cadenas alfanuméricas._
 
-#### Ejercicio 1
+##### Ejercicio 7
 
-Implemente un script que valide la cantidad de parametros ingresados sea la correcta. Ni menos, ni más.
+Implemente un script (p1e7-if-validar.sh) que valide la cantidad de parámetros ingresados sea la correcta. Ni menos, ni más.
 
-Deberá validar para su script que el usuario le pasó dos parametros al ejecutarlo.
+Deberá validar para su script que el usuario le pasó dos parámetros al ejecutarlo.
 
 ```console
 ./check-parametros.sh uno dos
@@ -133,13 +133,13 @@ OK
 ./check-parametros.sh uno dos tres
 ERROR: La cantidad de parametros requeridos son dos y usted ingreso X_VALOR.
 ```
-Donde X_VALOR es la cantidad de parametros que ingreso el usuario.
+Donde X_VALOR es la cantidad de parámetros que ingreso el usuario.
 
-_Ayuda: Para conocer la cantidad de parametros con la cual fue ejecutado el script, debe usar la variable especial: $#_
+_Ayuda: Para conocer la cantidad de parámetros con la cual fue ejecutado el script, debe usar la variable especial: $#_
 
-#### Ejercicio 2
+##### Ejercicio 8
 
-Un script que ingresando la edad, diga si es mayor o menor de edad (18 años).
+Un script (p1e8-if-edad.sh) que ingresando la edad, diga si es mayor o menor de edad (18 años).
 
 ### for
 
@@ -150,18 +150,62 @@ do
 done
 ```
 
-#### Ejercicio 1
+##### Ejercicio 9
 
+Hacer un script (p1e9-for-variables.sh) que imprima 5 veces el nombre pasado por parámetro, enumerando cada uno de ellos de la siguiente manera:
 
-#### Ejercicio 2
+```
+# ejemplo:
 
+./5veces.sh Lisa
+1) Hola Lisa
+2) Hola Lisa
+3) Hola Lisa
+4) Hola Lisa
+5) Hola Lisa
+```
 
 ### case
 
+```
+case $NUM in
+    0)
+        echo "El número ingresado es cero"
+        ;;
+    1)
+        echo "El número ingresado es uno"
+        ;;
+    2)
+        echo "El número ingresado es dos"
+        ;;
+    3)
+        echo "El número ingresado es tres"
+        ;;
+    *)
+        echo "El número ingresado es mayor a 3 y menor a 10"
+        ;;
+esac
+```
 
-#### Ejercicio 1
+##### Ejercicio 10
 
+Realizar un script (p1e10-case-traductor.sh) que pida ingresar uno de los 5 días hábiles de la semana (en minúsculas y sin acentos) y devuelva su traducción en inglés.
 
-#### Ejercicio 2
+|Español|Ingles|
+|---|---|
+|lunes|monday|
+|martes|tuesday|
+|miercoles|wednesday|
+|jueves|thursday|
+|viernes|friday|
 
+```console
+./p1e10-case-traductor.sh
+Por favor ingrese un dia de lunes a viernes
+Traduccion a ingles: lunes -> monday
+```
+Si se introduce otro día, o una palabra que no corresponde a un día se debe imprimir un mensaje de error:
 
+```console
+Palabra no soportada.
+```
