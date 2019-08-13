@@ -125,3 +125,13 @@ Realice este script de manera interactiva. Es decir, que solicite al usuario ing
 Implemente el código usando dos funciones: buscarMenorA y buscarMayorA.
 
 Debe contemplar el caso, si no existen personas que coincidan con el criterio de búsqueda se debe imprimir un mensaje.
+
+#### Ejercicio 8
+
+Consulte por GET el webservice rest: https://httpbin.org/get
+
+El script 08-test-rest.sh debe controlar que el status code retornado sea 200 y en este caso devolver el mensaje "Webservice saludable."
+
+En caso que el status code sea diferente a 200, devolver el mensaje "Alerta: el webservice no respondió status code 200".
+
+_Ayuda: Utilice el comando curl con su opción I. Puede que no tenga instalado curl, pruebe antes en la terminal de comandos._
