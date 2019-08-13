@@ -135,3 +135,24 @@ El script 08-test-rest.sh debe controlar que el status code retornado sea 200 y 
 En caso que el status code sea diferente a 200, devolver el mensaje "Alerta: el webservice no respondió status code 200".
 
 _Ayuda: Utilice el comando curl con su opción I. Puede que no tenga instalado curl, pruebe antes en la terminal de comandos._
+
+#### Ejercicio 9
+
+Hacer un script 09-country-info.sh que reciba por parámetro dos argumentos:
+
+- Argumento 1: CODE o NAME
+- Argumento 2: Código o Nombre de país
+
+Si en el primer argumento se pasa CODE, entonces el segundo deberá ser el código de país. Ejemplo AR para Argentina.
+
+Si en el primer argumento se pasa NAME, entonces el segundo deberá ser el nombre de país. Ejemplo Argentina.
+
+El script deberá retornar la moneda del país y su código. Ejemplo: Para Argentina, la moneda es el Peso y su código es ARS.
+
+Los datos para el script están en el archivo country-code-to-currency-code-mapping.csv cuyas columnas son:
+
+```console
+Country,CountryCode,Currency,Code
+```
+
+Utilice para este script: case y funciones.
