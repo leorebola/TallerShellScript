@@ -1,5 +1,7 @@
 # Ejercicios Prácticos 1
 
+Los siguientes ejercicios le ayudaran a comprender como escribir shell scripts.
+
 ## Variables
 
 |Código|Descripción|
@@ -209,3 +211,31 @@ Si se introduce otro día, o una palabra que no corresponde a un día se debe im
 ```console
 Palabra no soportada.
 ```
+
+## Funciones
+
+```console
+function function1
+{
+    echo "Esta es la function1 con parámetro: $1"
+}
+
+function2()
+{
+    echo "Esta es la function2 con parámetro: $1"
+}
+
+function1 "param1"
+function2 "param2"
+```
+
+##### Ejercicio 11
+
+Realizar un script (p1e11-funcion-log.sh) que tenga una función llamada "escribirLog" y que reciba dos parámetros: Tipo de log (TRACE, INFO, ERROR) y un mensaje. La función cada vez que sea llamada deberá imprimir por pantalla la fecha, hora, tipo de log y el mensaje. Ejemplo:
+
+```console
+lun ago 12 22:25:50 -03 2019 - INFO - Este es un mensaje desde la función.
+lun ago 12 22:25:50 -03 2019 - ERROR- Este es otro mensaje indicando un error.
+```
+
+La función dentro del script deberá ser llamada tres veces, una por cada tipo de log.
