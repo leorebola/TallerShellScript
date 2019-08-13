@@ -2,6 +2,22 @@
 
 Los siguientes ejercicios le ayudaran a comprender como escribir shell scripts.
 
+### Antes de comenzar:
+
+En su directorio personal de linux (/home/username) haga un nuevo directorio llamado "curso-sh".
+
+Y dentro de este directorio, cree las siguientes carpetas:
+
+curso-sh/<br>
+├── sh/<br>
+│   ├── practico-1/<br>
+│   ├── practico-2/<br>
+│   └── practico-3/<br>
+├── logs/<br>
+└── datos/
+
+Por cada práctico deberá utilizar la correspondiente carpeta. Siendo las carpetas _logs_ y _datos_ comunes para todos los prácticos y ejercicios.
+
 ## Variables
 
 |Código|Descripción|
@@ -18,7 +34,7 @@ Nombrado de variables:
 
 #### Ejercicio 1
 
-Realice un script (p1e1-constantes.sh) que defina e inicialice las siguientes variables como si fueran constantes de configuración:
+Realice un script (01-constantes.sh) que defina e inicialice las siguientes variables como si fueran constantes de configuración:
 
 - BASE_PATH
 - EMAIL_TEAM
@@ -37,7 +53,7 @@ UMBRAL_ERROR: valor
 
 #### Ejercicio 2
 
-Hacer un script (p1e2-variables.sh) con las siguientes variables inicializadas con el valor de texto NONE:
+Hacer un script (02-variables.sh) con las siguientes variables inicializadas con el valor de texto NONE:
 - nombre
 - edad
 - ciudad
@@ -59,7 +75,7 @@ Mi nombre es VALOR_NOMBRE, tengo VALOR_EDAD años y vivo en a ciudad de VALOR_CI
 
 _Ayuda: Para realizar un salto de línea puede utilizar \n en el comando echo_
 
-## Parámetros
+## Parámetros/Argumentos
 
 ```console
 #!/bin/sh
@@ -69,7 +85,7 @@ APELLIDO=$2
 
 echo "Hola, $NOMBRE $APELLIDO!"
 
-# Ejecución: ./p1e3-param-saludar.sh Chuck Norris
+# Ejecución: ./03-param-saludar.sh Chuck Norris
 ```
 
 ```console
@@ -84,11 +100,11 @@ echo "Hola, $NOMBRE!"
 
 #### Ejercicio 3 y 4
 
-Escriba los dos scripts (p1e3-param-saludar.sh y p1e4-param-saludar-interactivo.sh) de ejemplo que se encuentran acá arriba y ejecútelos para comprobar su funcionamiento.
+Escriba los dos scripts (03-param-saludar.sh y 04-param-saludar-interactivo.sh) de ejemplo que se encuentran acá arriba y ejecútelos para comprobar su funcionamiento.
 
 #### Ejercicio 5
 
-Realizar un script (p1e5-param-edad.sh) que le solicite ingresar su edad y le sume 10 años.
+Realizar un script (05-param-edad.sh) que le solicite ingresar su edad y le sume 10 años.
 
 ```console
 Por favor ingrese su edad:
@@ -104,7 +120,7 @@ _Ayuda: Para realizar operaciones aritméticas debe usar esta notación: $(( a +
 
 #### Ejercicio 6
 
-Un script (p1e6-param-sumar.sh) que sume dos números enteros pasados como parámetros al momento de la ejecución. No deberá solicitar ninguna acción al usuario.
+Un script (06-param-sumar.sh) que sume dos números enteros pasados como argumentos al momento de la ejecución. No deberá solicitar ninguna acción al usuario.
 
 ## Condicionales y Bucles
 
@@ -124,24 +140,24 @@ fi
 
 ##### Ejercicio 7
 
-Implemente un script (p1e7-if-validar.sh) que valide la cantidad de parámetros ingresados sea la correcta. Ni menos, ni más.
+Implemente un script (07-if-param-validar.sh) que valide la cantidad de argumentos ingresados sea la correcta. Ni más, ni menos.
 
-Deberá validar para su script que el usuario le pasó dos parámetros al ejecutarlo.
+La cantidad esperada de argumentos será de dos.
 
 ```console
-./check-parametros.sh uno dos
+./07-if-param-validar.sh uno dos
 OK
 
-./check-parametros.sh uno dos tres
+./07-if-param-validar.sh uno dos tres
 ERROR: La cantidad de parametros requeridos son dos y usted ingreso X_VALOR.
 ```
-Donde X_VALOR es la cantidad de parámetros que ingreso el usuario.
+Donde X_VALOR es la cantidad de argumentos que ingresó el usuario.
 
-_Ayuda: Para conocer la cantidad de parámetros con la cual fue ejecutado el script, debe usar la variable especial: $#_
+_Ayuda: Para conocer la cantidad de argumentos con la cual fue ejecutado el script, debe usar la variable especial: $#_
 
 ##### Ejercicio 8
 
-Un script (p1e8-if-edad.sh) que ingresando la edad, diga si es mayor o menor de edad (18 años).
+Un script (08-if-edad.sh) que ingresando la edad, diga si es mayor o menor de edad (18 años).
 
 ### for
 
@@ -154,12 +170,12 @@ done
 
 ##### Ejercicio 9
 
-Hacer un script (p1e9-for-variables.sh) que imprima 5 veces el nombre pasado por parámetro, enumerando cada uno de ellos de la siguiente manera:
+Hacer un script (09-for-5holas.sh) que imprima 5 veces el nombre pasado por parámetro, enumerando cada uno de ellos de la siguiente manera:
 
 ```
 # ejemplo:
 
-./5veces.sh Lisa
+./09-for-5holas.sh Lisa
 1) Hola Lisa
 2) Hola Lisa
 3) Hola Lisa
@@ -191,7 +207,7 @@ esac
 
 ##### Ejercicio 10
 
-Realizar un script (p1e10-case-traductor.sh) que pida ingresar uno de los 5 días hábiles de la semana (en minúsculas y sin acentos) y devuelva su traducción en inglés.
+Realizar un script (10-case-traductor.sh) que pida ingresar uno de los 5 días hábiles de la semana (en minúsculas y sin acentos) y devuelva su traducción en inglés.
 
 |Español|Ingles|
 |---|---|
@@ -202,7 +218,7 @@ Realizar un script (p1e10-case-traductor.sh) que pida ingresar uno de los 5 día
 |viernes|friday|
 
 ```console
-./p1e10-case-traductor.sh
+./10-case-traductor.sh
 Por favor ingrese un dia de lunes a viernes
 Traduccion a ingles: lunes -> monday
 ```
@@ -231,7 +247,7 @@ function2 "param2"
 
 ##### Ejercicio 11
 
-Realizar un script (p1e11-funcion-log.sh) que tenga una función llamada "escribirLog" y que reciba dos parámetros: Tipo de log (TRACE, INFO, ERROR) y un mensaje. La función cada vez que sea llamada deberá imprimir por pantalla la fecha, hora, tipo de log y el mensaje. Ejemplo:
+Realizar un script (11-funcion-log.sh) que tenga una función llamada "escribirLog" y que reciba dos parámetros: Tipo de log (TRACE, INFO, ERROR) y un mensaje. La función cada vez que sea llamada deberá imprimir por pantalla la fecha, hora, tipo de log y el mensaje. Ejemplo:
 
 ```console
 lun ago 12 22:25:50 -03 2019 - INFO - Este es un mensaje desde la función.
