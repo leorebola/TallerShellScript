@@ -90,3 +90,38 @@ La contraseña qwer1234 figura en el top 123 de las más usadas en 2017. Se reco
 ```
 
 _Ayuda: El comando grep tiene una opción que le puede ser útil_
+
+
+### Crear directorios y ficheros
+
+#### Ejercicio 6
+
+El script 06-deploy.sh al ejecutarse deberá crear un directorio de despliegue (deploy) y un fichero llamado 06-deploy.log en el directorio de logs.
+
+El log contendrá la fecha y hora de ejecución del script junto a un mensaje:
+
+```console
+FECHA HORA - Creación exitosa del directorio.
+```
+
+Pero en caso que el directorio ya existiera deberá escribir en el log el siguiente mensaje:
+
+```console
+FECHA HORA - Se omite la creación del directorio porque ya existe.
+```
+
+Luego el script deberá guardar en el mismo archivo de log, el nombre de usuario que ejecutó el script.
+
+_Ayuda: Googlee cómo obtener el nombre del usuario actual._
+
+#### Ejercicio 7
+
+Realizar un script (07-titanic.sh) que busque en el archivo titanic3.csv la cantidad de personas mayores o menores a una determinada edad que viajaban en dicho barco. No todas las personas registran edad, deberá contemplar este caso de error.
+
+Nótese que el archivo titanic3.csv no es necesario pasarlo como argumento.
+
+Realice este script de manera interactiva. Es decir, que solicite al usuario ingresar una edad y que luego solicite si debe ser menor o mayor a esa edad.
+
+Implemente el código usando dos funciones: buscarMenorA y buscarMayorA.
+
+Debe contemplar el caso, si no existen personas que coincidan con el criterio de búsqueda se debe imprimir un mensaje.
