@@ -1,7 +1,5 @@
 # TallerShellScript
 
-Taller práctico de capacitación en Shell Script.
-
 ```text
      _______. __    __   _______  __       __      
     /       ||  |  |  | |   ____||  |     |  |     
@@ -17,4 +15,7 @@ Taller práctico de capacitación en Shell Script.
 .----)   |   |  `----.|  |\  \----.|  | |  |          |  |     
 |_______/     \______|| _| `._____||__| | _|          |__|     
                                                                
+
+$ echo "Taller práctico de capacitación en Shell Script."
+
 ```
